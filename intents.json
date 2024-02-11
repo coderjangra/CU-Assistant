@@ -1,0 +1,309 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day", "Hi", "Helo", "Yo"],
+         "responses": ["Hello", "Good to see you again", "Hi there, how can I help?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me", "thankyou", "thank"],
+         "responses": ["My pleasure", "You're Welcome"],
+         "context": [""]
+        },
+        {
+        "tag": "courses",
+        "patterns": ["What courses do you offer?", "Tell me about your programs", "Which majors are available?"],
+        "responses": ["Chandigarh University offers a variety of undergraduate and postgraduate courses. You can find detailed information here: https://www.cuchd.in/admissions/course-fee.php"]
+        },
+        {
+        "tag": "admission",
+        "patterns": ["How can I apply for admission?", "What are the admission requirements?", "Walk me through the application process"],
+        "responses": ["To apply for admission, you can visit the official admission portal on our website: https://cucet.cuchd.in/index.aspx?type=cuchd"]
+        },
+        {
+        "tag": "deadline",
+        "patterns": ["Is there a deadline for applications?", "When is the application deadline?", "Tell me about the admissions timeline"],
+        "responses": ["The application deadline may vary by program. Please check our official website or contact the admissions office for the most accurate information."]
+        },
+        {
+        "tag": "tuition",
+        "patterns": ["What are the tuition fees?", "Can you provide information on the cost of attendance?", "Tell me about financial aid"],
+        "responses": ["For information on tuition fees and financial aid, please visit our official website or contact the financial aid office. To know fees of courses visit: https://www.cuchd.in/admissions/course-fee.php"]
+        },
+        {
+        "tag": "location",
+        "patterns": ["Where is the campus located?", "What is the address of Chandigarh University?", "Give me directions to the university"],
+        "responses": ["Chandigarh University is located at [CHANDIGARH UNIVERSITY, NH-05, Ludhiana - Chandigarh State Hwy, Punjab 140413]. For detailed directions, you can use online maps or contact the university."]
+        },
+        {
+        "tag": "facilities",
+        "patterns": ["What facilities are available on campus?", "Tell me about the campus amenities", "Describe the university infrastructure"],
+        "responses": ["Chandigarh University provides state-of-the-art facilities, including modern classrooms, labs, sports facilities, and more. Explore our website for a detailed list of amenities."]
+        },
+        {
+        "tag": "housing",
+        "patterns": ["Is there on-campus housing?", "Tell me about student accommodation", "What are the housing options?", "hostel", "details of hostel"],
+        "responses": ["Yes, we offer on-campus housing. Also, many independent PG's and flats are available near campus. For details and application procedures, please visit: https://www.cuchd.in/campus-life/ "]
+        },
+        {
+        "tag": "contact",
+        "patterns": ["How can I contact the admissions office?", "What is the admissions office phone number?", "Give me the contact details"],
+        "responses": ["You can contact the admissions office at [1800 1212 88800] or [cucet@cumail.in]. For more contact details and office hours, please visit our official website."]
+        },
+        {
+        "tag": "extracurricular",
+        "patterns": ["What extracurricular activities are available?", "Tell me about student clubs and organizations", "Describe the campus life"],
+        "responses": ["Chandigarh University offers a vibrant campus life with numerous clubs and activities. Visit https://www.cuchd.in/campus-life/ to know more!"]
+        },
+        {
+        "tag": "career",
+        "patterns": ["What are the career services provided?", "Tell me about job placement opportunities", "How does the university support career development?"],
+        "responses": ["Our Career Services team assists students in exploring career options, developing skills, and connecting with potential employers. Visit https://www.cuchd.in/placements/ for more information."]
+        },
+        {
+        "tag": "international",
+        "patterns": ["Are there international student services?", "Tell me about support for international students", "Describe the international student experience"],
+        "responses": ["Chandigarh University values its international students and provides various support services. For details on international student resources and the student experience, please visit our dedicated page."]
+        },
+        {
+        "tag": "calendar",
+        "patterns": ["What is the academic calendar?", "Tell me about the semester schedule", "When does the academic year start and end?"],
+        "responses": ["The academic calendar, including semester schedules and important dates, can be found on our official website. Check the academic calendar section for details."]
+        },
+        {
+        "tag": "password",
+        "patterns": ["How do I reset my password?", "I forgot my login credentials", "Help me with account recovery"],
+        "responses": ["For password reset or account recovery, please visit the login page on our website and follow the instructions for password recovery. If you encounter issues, contact our IT support."]
+        },
+        {
+        "tag": "ranking",
+        "patterns": ["What is the university's ranking?", "Tell me about Chandigarh University's reputation", "Describe the academic achievements"],
+        "responses": ["Chandigarh University has achieved notable rankings for its academic excellence. For the latest rankings and information on academic achievements, please visit our official website."]
+        },
+        {
+        "tag": "alumni",
+        "patterns": ["What is the alumni network like?", "Tell me about successful alumni", "How can I connect with other graduates?"],
+        "responses": ["Our alumni network is extensive, comprising successful individuals in various fields. To connect with alumni or learn more about their achievements, visit our alumni association page."]
+        },
+        {
+        "tag": "sports",
+        "patterns": ["Is there a sports program?", "Tell me about university sports teams", "Describe the athletic facilities"],
+        "responses": ["Chandigarh University is proud of its sports programs. Explore our website for information on university sports teams, athletic facilities, and upcoming sports events."]
+        },
+        {
+        "tag": "submission",
+        "patterns": ["What is the procedure for document submission?", "How can I upload required documents?", "Tell me about document verification"],
+        "responses": ["The document submission process is outlined on our official website. Visit the admissions or student portal section for details on uploading required documents and verification procedures."]
+        },
+        {
+        "tag": "grading",
+        "patterns": ["What is the grading system?", "Tell me about the GPA scale", "How are grades calculated?"],
+        "responses": ["Our grading system follows a [insert description] scale. For detailed information on the grading system and GPA calculation, please refer to the academic policies section on our website."]
+        },
+        {
+        "tag": "scholarships",
+        "patterns": ["Can you provide information on scholarships?", "Tell me about available scholarships", "How can I apply for a scholarship?"],
+        "responses": ["Chandigarh University offers various scholarships. Visit our scholarships page on the official website to learn about eligibility criteria, application procedures, and available scholarship programs."]
+        },
+        {
+        "tag": "app",
+        "patterns": ["Is there a mobile app for students?", "Tell me about the university app", "How can I download the mobile application?"],
+        "responses": ["Yes, we have a mobile app for students. You can download it from [insert app store]. For more details on app features and download instructions, visit our mobile app page."]
+        },
+        {
+        "tag": "mission",
+        "patterns": ["What is the university's mission statement?", "Tell me about Chandigarh University's values", "Describe the institution's goals"],
+        "responses": ["Chandigarh University is committed to [insert mission statement]. To learn more about our values and goals, please visit the about us section on our official website."]
+        },
+        {
+        "tag": "research",
+        "patterns": ["How can I get involved in research?", "Tell me about opportunities for research", "Describe the research facilities"],
+        "responses": ["Getting involved in research is a great opportunity at Chandigarh University. Explore our research facilities and ongoing projects on the research and innovation page of our website."]
+        },
+        {
+        "tag": "transfer",
+        "patterns": ["What is the process for transferring credits?", "How can I transfer from another university?", "Tell me about credit transfer policies"],
+        "responses": ["Credit transfer policies and procedures are outlined on our official website. Visit the academic affairs or admissions section for details on transferring credits and related policies."]
+        },
+        {
+        "tag": "international_requirements",
+        "patterns": ["What are the entry requirements for international students?", "Tell me about visa requirements", "Describe the international admissions process"],
+        "responses": ["International student entry requirements and visa information can be found on our official website. Please visit the international admissions section for detailed information on the application process."]
+        },
+        {
+        "tag": "tour",
+        "patterns": ["How can I schedule a campus tour?", "Tell me about visiting the university", "Give me information on guided tours"],
+        "responses": ["Scheduling a campus tour is easy! Visit our campus tours page on the website for information on guided tours, virtual tours, and how to schedule a visit to Chandigarh University."]
+        },
+        {
+        "tag": "online_courses",
+        "patterns": ["What are the technology requirements for online courses?", "Tell me about e-learning tools", "Describe the online learning environment"],
+        "responses": ["For technology requirements, e-learning tools, and information about the online learning environment, please refer to the online courses section on our official website."]
+        },
+        {
+        "tag": "dress_code",
+        "patterns": ["Is there a dress code for students?", "Tell me about the university dress policy", "What is the recommended attire for classes?"],
+        "responses": ["Chandigarh University follows a [insert description] dress code. Please visit the student handbook or code of conduct section on our website for details on the university dress policy."]
+        },
+        {
+        "tag": "student_government",
+        "patterns": ["How can I participate in student government?", "Tell me about student leadership opportunities", "Describe the student government structure"],
+        "responses": ["Participating in student government is a great way to get involved. Explore student leadership opportunities and learn about the structure of our student government on the student affairs section of our website."]
+        },
+        {
+        "tag": "refund",
+        "patterns": ["What is the refund policy for tuition?", "Tell me about tuition reimbursement", "How does the university handle refunds?"],
+        "responses": ["Our refund policy is outlined in the tuition and fees section of our website. For details on tuition reimbursement and the university's refund process, please refer to the official policies."]
+        },
+        {
+        "tag": "health_services",
+        "patterns": ["Can you provide information on health services?", "Tell me about the university health center", "Describe the medical facilities on campus"],
+        "responses": ["Chandigarh University is committed to the health and well-being of its students. Explore the health services page on our website for details on the university health center and medical facilities."]
+        },
+        {
+        "tag": "diversity",
+        "patterns": ["What is the diversity and inclusion policy?", "Tell me about efforts to promote diversity", "Describe the university's commitment to inclusion"],
+        "responses": ["Diversity and inclusion are fundamental values at Chandigarh University. Learn more about our commitment to diversity and inclusion on the diversity initiatives page of our website."]
+        },
+        {
+        "tag": "library",
+        "patterns": ["How do I access the online library?", "Tell me about library resources", "What databases are available for research?"],
+        "responses": ["Accessing the online library is simple. Visit the library resources section on our website for information on available databases, research resources, and how to make the most of our library services."]
+        },
+        {
+        "tag": "advising",
+        "patterns": ["What is the academic advising process?", "Tell me about meeting with an academic advisor", "Describe the support for academic success"],
+        "responses": ["Our academic advising process is designed to support your success. Learn about meeting with an academic advisor and the support services available on the academic advising page of our website."]
+        },
+        {
+        "tag": "club",
+        "patterns": ["How can I join a student club?", "Tell me about extracurricular involvement", "Describe opportunities for joining student organizations"],
+        "responses": ["Joining a student club is a fantastic way to engage in campus life. Explore opportunities for extracurricular involvement and learn how to join student organizations on the student activities page of our website."]
+        },
+        {
+        "tag": "shuttle",
+        "patterns": ["Is there a bus service for students?", "Tell me about transportation options", "What is the campus shuttle schedule?"],
+        "responses": ["Yes, we offer a bus service for students. For details on transportation options, including the campus bus schedule, visit the transportation services section on our website."]
+        },
+        {
+        "tag": "internship",
+        "patterns": ["How do I apply for an internship?", "Tell me about internship opportunities", "Describe the process for securing an internship"],
+        "responses": ["Exploring internship opportunities is a key step in your academic journey. Visit the career services or internship opportunities section on our website for information on the application process."]
+        },
+        {
+        "tag": "sustainability",
+        "patterns": ["What is the university's stance on sustainability?", "Tell me about environmental initiatives", "Describe the campus sustainability efforts"],
+        "responses": ["Chandigarh University is committed to sustainability. Learn about our environmental initiatives and campus sustainability efforts on the sustainability page of our website."]
+        },
+        {
+        "tag": "faculty",
+        "patterns": ["Can you provide information on the faculty?", "Tell me about the qualifications of professors", "Describe the academic expertise of the faculty"],
+        "responses": ["Our faculty members are highly qualified and bring diverse expertise to the classroom. Explore the faculty directory on our website for information on the qualifications and expertise of our professors."]
+        },
+        {
+        "tag": "conduct",
+        "patterns": ["What is the code of conduct for students?", "Tell me about university policies", "Describe the student handbook"],
+        "responses": ["The university's code of conduct and policies are outlined in the student handbook. For details on university policies and the code of conduct, please visit the student affairs section on our website."]
+        },
+        {
+        "tag": "post-admission",
+        "patterns": ["I have paid my fees, what to do now?", "Where to go to know about my classes?", "Where are my classes?", "Which block is mine?", "Who is my HOD?", "Who is my mentor?"],
+        "responses": ["For help after admission, like class schedule, block and faculty allocation, etc., you need to visit the Department of Student Welfare (DSW)."]
+        },
+
+        
+        {
+            "tag": "LASER",
+            "patterns": [
+              "What does LASER stand for?",
+              "What is laser",
+              "Define LASER",
+              "Tell me about Light Amplification by Stimulated Emission of Radiation"
+            ],
+            "responses": [
+              "LASER stands for 'Light Amplification by Stimulated Emission of Radiation.'",
+              "It is a very intense, concentrated, highly parallel, and monochromatic beam of light."
+            ]
+          },
+          {
+            "tag": "Importance",
+            "patterns": [
+              "Why is it important to study Laser?",
+              "What are the applications of Laser?",
+              "Tell me about the importance of studying LASER."
+            ],
+            "responses": [
+              "Studying LASER is important because it offers a high-speed way to process various materials, used in various industries, and is driving innovation in technology."
+            ]
+          },
+          {
+            "tag": "Coherence",
+            "patterns": [
+              "What is coherence in laser?",
+              "Explain coherent and incoherent light.",
+              "Tell me about the coherence property of LASER."
+            ],
+            "responses": [
+              "Coherence is a crucial property of LASER. Coherent light is uniform in frequency, amplitude, continuity, and constant initial phase difference."
+            ]
+          },
+          {
+            "tag": "Characteristics",
+            "patterns": [
+              "What are the characteristics of Laser light?",
+              "Explain the features of Laser light.",
+              "Tell me about the properties of LASER light."
+            ],
+            "responses": [
+              "Laser light is highly directional, coherent, monochromatic, sharply focused, and has higher brightness than other light sources."
+            ]
+          },
+          {
+            "tag": "AtomicInteractions",
+            "patterns": [
+              "Explain the atomic interactions related to LASER.",
+              "Tell me about induced absorption, spontaneous emission, and stimulated emission."
+            ],
+            "responses": [
+              "Atomic interactions related to LASER include induced absorption, spontaneous emission, and stimulated emission."
+            ]
+          },
+          {
+            "tag": "Books",
+            "patterns": [
+              "What are some relevant books for studying LASER?",
+              "Recommend books on LASER.",
+              "Suggest books for LASER studies."
+            ],
+            "responses": [
+              "Some relevant books for studying LASER are 'Laser and Non-Linear Optics' by B.B. Laud and 'Optics' by Ajoy Ghatak."
+            ]
+          },
+          {
+            "tag": "WebLinks",
+            "patterns": [
+              "Can you provide some relevant web links for LASER studies?",
+              "Share websites related to LASER.",
+              "Give me web links for LASER topics."
+            ],
+            "responses": [
+              "Here are some relevant web links for LASER studies: [Link 1](https://www.rfwireless-world.com/Terminology/Coherent-Light-vs-Incoherent-Light.html), [Link 2](https://www.pngkit.com/view/u2e6r5y3y3y3u2o0_coherent-light-incoherent-lightmonochromatic-light-coherent-light/), [Link 3](http://www.physics-and-radio-electronics.com/blog/absorption-of-radiation-spontaneousemission-and-stimulated-emission)"
+            ]
+          },
+          {
+            "tag": "Videos",
+            "patterns": [
+              "Are there any relevant videos on LASER?",
+              "Recommend videos for LASER studies.",
+              "Suggest LASER-related video lectures."
+            ],
+            "responses": [
+              "Here are some relevant videos for LASER studies: [Video 1](https://www.youtube.com/watch?v=IXMEFuZlYOE), [Video 2](https://www.coursera.org/lecture/nanophotonics-detectors/spontaneous-emissionenhancement-TyaUF)"
+            ]
+          }
+
+    ]}
