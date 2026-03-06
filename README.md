@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="https://via.placeholder.com/150/4f46e5/ffffff?text=%F0%9F%A4%96" alt="CU Assistant Logo" width="100"/>
   <h1>🎓 CU Assistant</h1>
   <p><strong>A Highly Intelligent, Premium Virtual Assistant for Chandigarh University</strong></p>
   <p>
