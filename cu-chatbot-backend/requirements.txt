@@ -1,0 +1,6 @@
+flask
+flask-cors
+numpy
+nltk
+sentence-transformers
+torch
