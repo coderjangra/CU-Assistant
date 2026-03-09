@@ -10,6 +10,8 @@ const COMMON_QUESTIONS = [
   "Tell me about CU Fest"
 ];
 
+const API_URL = "http://127.0.0.1:5000"; // Replace with your Render URL
+
 function App() {
   const [message, setMessage] = useState("");
   const [chat, setChat] = useState([]);
@@ -41,7 +43,7 @@ function App() {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://127.0.0.1:5000/chat", { message: textToSend });
+      const res = await axios.post(`${API_URL}/chat`, { message: textToSend });
       setTimeout(() => {
         const botMsg = { sender: "bot", text: res.data.reply };
         setChat(prev => [...prev, botMsg]);

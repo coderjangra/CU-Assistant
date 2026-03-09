@@ -4,3 +4,4 @@ numpy
 nltk
 sentence-transformers
 torch
+gunicorn
