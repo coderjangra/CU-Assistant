@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/CU-Assistant/static/css/main.8269f5bf.css",
+    "main.js": "/CU-Assistant/static/js/main.aae318ed.js",
+    "static/js/453.9c469f23.chunk.js": "/CU-Assistant/static/js/453.9c469f23.chunk.js",
+    "index.html": "/CU-Assistant/index.html",
+    "main.8269f5bf.css.map": "/CU-Assistant/static/css/main.8269f5bf.css.map",
+    "main.aae318ed.js.map": "/CU-Assistant/static/js/main.aae318ed.js.map",
+    "453.9c469f23.chunk.js.map": "/CU-Assistant/static/js/453.9c469f23.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8269f5bf.css",
+    "static/js/main.aae318ed.js"
+  ]
+}
