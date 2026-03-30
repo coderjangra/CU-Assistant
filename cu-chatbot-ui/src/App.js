@@ -10,7 +10,7 @@ const COMMON_QUESTIONS = [
   "Tell me about CU Fest"
 ];
 
-const API_URL = "http://127.0.0.1:5000"; // Replace with your Render URL
+const API_URL = "https://cu-chatbot-backend.onrender.com"; // Replace with your Render URL
 
 function App() {
   const [message, setMessage] = useState("");
