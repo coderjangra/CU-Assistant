@@ -24,25 +24,40 @@ embedder = SentenceTransformer("all-MiniLM-L6-v2")
 # ---------------- PREPARE EMBEDDINGS ---------------- #
 
 tags = []
-embeddings = []
+embeddings = None
 responses_map = {}
 
-print("Loading and encoding intents. This might take a few seconds...")
 for intent in intents_data:
     tag = intent["tag"]
     responses_map[tag] = intent["responses"]
 
-    patterns = intent.get("patterns", [])
-    if not patterns:
-        continue
+EMBEDDINGS_FILE = "embeddings.npy"
+TAGS_FILE = "tags.json"
 
-    # Create an averaged embedding for all patterns in an intent
-    emb = embedder.encode(patterns).mean(axis=0)
-    tags.append(tag)
-    embeddings.append(emb)
+if os.path.exists(EMBEDDINGS_FILE) and os.path.exists(TAGS_FILE):
+    print("Loading pre-computed embeddings from disk...")
+    embeddings = np.load(EMBEDDINGS_FILE)
+    with open(TAGS_FILE, "r") as f:
+        tags = json.load(f)
+else:
+    print("Computing and caching embeddings. This might take a few seconds...")
+    embeddings_list = []
+    for intent in intents_data:
+        tag = intent["tag"]
+        patterns = intent.get("patterns", [])
+        if not patterns:
+            continue
 
-embeddings = np.array(embeddings)
-print(f"Successfully loaded and encoded {len(tags)} intents.")
+        # Create an averaged embedding for all patterns in an intent
+        emb = embedder.encode(patterns).mean(axis=0)
+        tags.append(tag)
+        embeddings_list.append(emb)
+
+    embeddings = np.array(embeddings_list)
+    np.save(EMBEDDINGS_FILE, embeddings)
+    with open(TAGS_FILE, "w") as f:
+        json.dump(tags, f)
+    print(f"Successfully loaded and encoded {len(tags)} intents.")
 
 # ---------------- SIMILARITY ---------------- #
 
