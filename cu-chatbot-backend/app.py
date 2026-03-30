@@ -2,6 +2,11 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import json
 import numpy as np
+import os
+
+# Set HuggingFace cache to a local directory so it persists in Render's build artifact
+os.environ["HF_HOME"] = os.path.join(os.getcwd(), ".hf_cache")
+
 from sentence_transformers import SentenceTransformer
 
 # ---------------- APP SETUP ---------------- #
@@ -96,4 +101,5 @@ def chat():
 # ---------------- RUN ---------------- #
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port, debug=True)

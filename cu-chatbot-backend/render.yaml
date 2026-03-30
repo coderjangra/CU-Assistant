@@ -3,6 +3,6 @@ services:
     name: cu-chatbot-backend
     env: python
     rootDir: cu-chatbot-backend
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -r requirements.txt && python -c "import app; print('Model cached during build!')"
     startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --timeout 120
     plan: free
