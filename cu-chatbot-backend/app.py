@@ -12,6 +12,10 @@ os.environ["HF_HOME"] = os.path.join(os.getcwd(), ".hf_cache")
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/')
+def home():
+    return jsonify({"status": "success", "message": "CU-Chatbot Backend is running!"}), 200
+
 # ---------------- LOAD DATA ---------------- #
 
 with open("intents.json", "r", encoding="utf-8") as f:
