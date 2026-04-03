@@ -7,8 +7,6 @@ import os
 # Set HuggingFace cache to a local directory so it persists in Render's build artifact
 os.environ["HF_HOME"] = os.path.join(os.getcwd(), ".hf_cache")
 
-from sentence_transformers import SentenceTransformer
-
 # ---------------- APP SETUP ---------------- #
 
 app = Flask(__name__)
@@ -19,7 +17,14 @@ CORS(app)
 with open("intents.json", "r", encoding="utf-8") as f:
     intents_data = json.load(f)["intents"]
 
-embedder = SentenceTransformer("all-MiniLM-L6-v2")
+embedder = None
+def get_embedder():
+    global embedder
+    if embedder is None:
+        print("Loading SentenceTransformer model...")
+        from sentence_transformers import SentenceTransformer
+        embedder = SentenceTransformer("all-MiniLM-L6-v2")
+    return embedder
 
 # ---------------- PREPARE EMBEDDINGS ---------------- #
 
@@ -49,7 +54,7 @@ else:
             continue
 
         # Create an averaged embedding for all patterns in an intent
-        emb = embedder.encode(patterns).mean(axis=0)
+        emb = get_embedder().encode(patterns).mean(axis=0)
         tags.append(tag)
         embeddings_list.append(emb)
 
@@ -72,7 +77,7 @@ def predict_intent(text: str):
     if not text_l:
         return "fallback"
 
-    vec = embedder.encode([text_l])[0]
+    vec = get_embedder().encode([text_l])[0]
 
     # Calculate similarity against ALL intents globally
     sims = [cosine_sim(vec, e) for e in embeddings]
